@@ -1,0 +1,18 @@
+<input id="textdata" type="text" value="{{Content}}" />
+<br/><br/>
+<select id="selecttext">
+     <option *ngFor="let city of CityList" value="{{city}}">{{city}}</option>
+</select>
+<br/><br/>
+<button (click)="onSubmit()" name="Click">Click</button>
+<br/><br/>
+<table border='1'>
+    <tr *ngFor="let tdata of TableContent">
+        <td>{{tdata.Content}}</td>
+        <td >{{tdata.City}}</td>
+        <td ><button id="{{tdata.id}}" (click)="onRemove($event)">{{tdata.id}}</button></td>
+    </tr>      
+</table>
+      
+
+
